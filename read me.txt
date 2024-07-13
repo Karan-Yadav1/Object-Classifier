@@ -29,6 +29,7 @@ Installation
 
 Usage
 -----
+Create a folder named as 'detection' in the root directory.
 Use these arguments in the terminal.
 1. Detecting Objects in Images:
 

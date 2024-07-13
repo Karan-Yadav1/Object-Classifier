@@ -1,0 +1,64 @@
+Object Classifier
+=======================
+
+This repository provides a Python implementation for object detection using the YOLOv3 model. The implementation can handle images, videos, and webcam inputs.
+
+Table of Contents
+-----------------
+- Installation
+- Usage
+  - Detecting Objects in Images
+  - Detecting Objects in Videos
+  - Detecting Objects from Webcam
+- Arguments
+- Credits
+Installation
+------------
+1. Clone the repository
+
+2. Install dependencies:
+
+    pip install -r requirements.txt
+
+3. Download the YOLOv3 weights and configuration files:
+
+    https://pjreddie.com/darknet/yolo/
+
+    Place these files in the root directory of the project.
+    
+
+Usage
+-----
+Use these arguments in the terminal.
+1. Detecting Objects in Images:
+
+    python detector.py --input <image_path> --outdir <output_directory>
+				or
+    python detector.py -i <image_path> / for default directory
+
+2. Detecting Objects in Videos:
+
+    python detector.py --input <video_path> --video --outdir <output_directory>
+				or
+    python detector.py -i <video_path> -v / for default directory
+
+3. Detecting Objects from Webcam:
+
+    python detector.py --webcam
+
+Arguments
+---------
+- `-i`, `--input`: Path to input image or directory or video (required for image and video detection)
+- `-t`, `--obj-thresh`: Objectness threshold, DEFAULT: 0.5
+- `-n`, `--nms-thresh`: Non-max suppression threshold, DEFAULT: 0.4
+- `-o`, `--outdir`: Output directory, DEFAULT: detection/
+- `-v`, `--video`: Flag for detecting in video input
+- `-w`, `--webcam`: Flag for detecting from webcam
+- `--cuda`: Flag for running on GPU
+- `--no-show`: Do not show the detected video in real time
+
+
+Credits
+-------
+
+- YOLOv3 weights and configuration: https://pjreddie.com/darknet/yolo/
